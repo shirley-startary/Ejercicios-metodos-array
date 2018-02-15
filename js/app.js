@@ -44,7 +44,7 @@ codificado cambiando cada letra por la que siguiente del alfabeto*/
 
 
 var shiftLetters = function(str) {
-  //Escribe tu codigo aqui
+  //Escribe tu codigo aqui.
 
 }
 
@@ -53,14 +53,31 @@ console.log(outputShiftLetters); // ---> 'ifmmp'
 
 //Even numbers
 //Manipula el siguiente array y devuelve un nuevo array que contenga solo a los números pares
+// ejem. output --> [2, 4, 6, 8, 10]
 
 var numberArray = [1,2,3,4,5,6,7,8,9,10];
+
+//Reducer
+/*Escribe una función reducer() que tome un arreglo de numeros y retorne un
+arreglos de dos numeros, el primer numero es la suma de los numero pares y el
+segundo numero la suma de los numeros impares*/
+//ejem: reducer([1,2,3,4,5,6,7,8,9]) ---> [20, 25]
+
+var reducer = function() {
+  //Escribe tu codigo aqui.
+}
+
+var outputReducer = reducer([1,2,3,4,5,6,7,8,9]);
+console.log(outputReducer); // ---> [ 20, 25 ]
+
+
+
 
 
 //arrayt with strings 'javascript'
 /*Manipula el siguiente array y devuelve un nuevo array que contenga los strings 'javascript',
   debes concatenar dos difrentes métodos para arrays.
-  output --> ['javascript', 'javascript', 'javascript']
+  ejem. output --> ['javascript', 'javascript', 'javascript']
 */ 
 
 
@@ -80,6 +97,8 @@ var persons = [
   1. Selecciona solo a los perros.
   2. Transforma su edad en años perros (multiplica cada una por siete).
   3. Suma el resultado.
+  
+  ejem. output --> 84
 */
 
 var data = [
@@ -105,8 +124,12 @@ var data = [
   },
 ];
 
+
 //Alphabetic order
-//Ordena el siguiente array alfabeticamente
+//Manipula el siguiente array de frutas y ordenalo alfabeticamente
+//ejem. output --> ['Apple', 'Banana', 'Kiwi', 'Orange'];
 
 var fruits = ['Banana', 'Orange', 'Apple', 'Kiwi'];
+
+
 
