@@ -51,6 +51,11 @@ var shiftLetters = function(str) {
 var outputShiftLetters = shiftLetters('hello');
 console.log(outputShiftLetters); // ---> 'ifmmp'
 
+//Even numbers
+//Manipula el siguiente array y devuelve un nuevo array que contenga solo a los números pares
+// ejem. output --> [2, 4, 6, 8, 10]
+
+var numberArray = [1,2,3,4,5,6,7,8,9,10];
 
 //Reducer
 /*Escribe una función reducer() que tome un arreglo de numeros y retorne un
@@ -64,3 +69,67 @@ var reducer = function() {
 
 var outputReducer = reducer([1,2,3,4,5,6,7,8,9]);
 console.log(outputReducer); // ---> [ 20, 25 ]
+
+
+
+
+
+//arrayt with strings 'javascript'
+/*Manipula el siguiente array y devuelve un nuevo array que contenga los strings 'javascript',
+  debes concatenar dos difrentes métodos para arrays.
+  ejem. output --> ['javascript', 'javascript', 'javascript']
+*/ 
+
+
+var persons = [
+  {id : 1, name : "John", tags : "javascript"}, 
+  {id : 2, name : "Alice", tags : "javascript"}, 
+  {id : 3, name : "Roger", tags : "java"},
+  {id : 4, name : "Adam", tags : "javascript"},
+  {id : 5, name : "Alex", tags : "java"}
+];
+
+
+//Total de edad en 'años perro' 
+/*Considera la siguiente data. Nosotros tenmos un arreglo de objetos, cada objeto representa
+  una mascota. Las mascotas tienen un nombre, una edad y un tipo.
+  Instrucciones: 
+  1. Selecciona solo a los perros.
+  2. Transforma su edad en años perros (multiplica cada una por siete).
+  3. Suma el resultado.
+  
+  ejem. output --> 84
+*/
+
+var data = [
+  {
+    name: 'Butters',
+    age: 3,
+    type: 'dog'
+  },
+  {
+    name: 'Lizzy',
+    age: 6,
+    type: 'dog'
+  },
+  {
+    name: 'Red',
+    age: 1,
+    type: 'cat'
+  },
+  {
+    name: 'Joey',
+    age: 3,
+    type: 'dog'
+  },
+];
+
+
+//Alphabetic order
+//Manipula el siguiente array de frutas y ordenalo alfabeticamente
+//ejem. output --> ['Apple', 'Banana', 'Kiwi', 'Orange'];
+
+var fruits = ['Banana', 'Orange', 'Apple', 'Kiwi'];
+
+
+
