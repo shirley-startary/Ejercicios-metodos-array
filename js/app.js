@@ -44,9 +44,23 @@ codificado cambiando cada letra por la que siguiente del alfabeto*/
 
 
 var shiftLetters = function(str) {
-  //Escribe tu codigo aqui
+  //Escribe tu codigo aqui.
 
 }
 
 var outputShiftLetters = shiftLetters('hello');
 console.log(outputShiftLetters); // ---> 'ifmmp'
+
+
+//Reducer
+/*Escribe una función reducer() que tome un arreglo de numeros y retorne un
+arreglos de dos numeros, el primer numero es la suma de los numero pares y el
+segundo numero la suma de los numeros impares*/
+//ejem: reducer([1,2,3,4,5,6,7,8,9]) ---> [20, 25]
+
+var reducer = function() {
+  //Escribe tu codigo aqui.
+}
+
+var outputReducer = reducer([1,2,3,4,5,6,7,8,9]);
+console.log(outputReducer); // ---> [ 20, 25 ]
