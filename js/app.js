@@ -26,7 +26,7 @@ console.log(outputCapitalize); //----> "WHOOP";
 
 var swapCase = function(str) {
   // Escribe tu codigo aqui
-
+  
 }
 
 var outputSwapCase = swapCase("hey gurl, lets javascript together sometime")
@@ -35,24 +35,25 @@ console.log(outputSwapCase); //---> "HEY gurl, LETS javascript TOGETHER sometime
 
 // 3. shiftLetter
 /*Escribe una funcion ShiftLetter() que tome un string y retorna un string
-  codificado cambiando cada letra por la que siguiente del alfabeto
-  Tips: Investiga sobre las funciones de JS  (String.fromCharCode() y String.charCodeAt())
-  codigo ascii te puede ayudar para resolver este ejercicio*/
+
+codificado cambiando cada letra por la siguiente del alfabeto*/
+//Tips: Investiga sobre las funciones de JS  (String.fromCharCode() y String.charCodeAt())
+// codigo ascii te puede ayudar para resolver este ejercicio
 
 //ejem:  shiftLetters('hello') // ---> 'ifmmp'
 //ejem:  shiftLetters('abcxyz') // ---> "bcdyz
 
-
 var shiftLetters = function(str) {
   //Escribe tu codigo aqui.
-
 }
 
 var outputShiftLetters = shiftLetters('hello');
 console.log(outputShiftLetters); // ---> 'ifmmp'
 
+
 // 4. Even numbers
 //Manipula el siguiente array y devuelve un nuevo array que contenga solo a los números pares
+// ejem. evenNumber([1,2,3,4,5,6,7,8,9,10]) ---> [2, 4, 6, 8, 10]
 
 var numberArray = [1,2,3,4,5,6,7,8,9,10];
 
@@ -60,17 +61,19 @@ var evenNumbers = function(array) {
   //Escribe tu codigo aqui.
 };
 
-var outputEvenNumbers = even(numberArray);
+var outputEvenNumbers = evenNumbers(numberArray);
 console.log(outputEvenNumbers); // ---> [2, 4, 6, 8, 10]
 
+
 // 5. Odd numbers
-//Ahora  manipulando el mismo array devuelve un nuevo array que contenga solo a los números impares
+//Ahora  manipulando el mismo array devuelve un nuevo array que contenga solo a los números impares.
+// ejem. oddNumbers([1,2,3,4,5,6,7,8,9,10]) ---> [1, 3, 5, 7, 9]
 
 var oddNumbers = function(array) {
   //Escribe tu codigo aqui.
 };
 
-var outputOdd = odd(numberArray);
+var outputOdd = oddNumbers(numberArray);
 console.log(outputOddNumbers); // ---> [1, 3, 5, 7, 9]
 
 
@@ -79,17 +82,16 @@ console.log(outputOddNumbers); // ---> [1, 3, 5, 7, 9]
   arreglos de dos numeros, el primer numero es la suma de los numero pares y el
   segundo numero la suma de los numeros impares
   ejem: reducer([1,2,3,4,5,6,7,8,9]) ---> [20, 25]
-  NOTA: Debes hacer uso de la funcion evenNumbers() y oddNumbers()*/
+
+Nota: Debes de hacer uso de las funciones de evenNumbers() y oddNumbers.*/
 
 var reducer = function() {
   //Escribe tu codigo aqui.
+
 }
 
 var outputReducer = reducer([1,2,3,4,5,6,7,8,9]);
 console.log(outputReducer); // ---> [ 20, 25 ]
-
-
-
 
 
 // 7. arrayt with strings 'javascript'
