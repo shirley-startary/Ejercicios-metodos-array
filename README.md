@@ -1,2 +1,13 @@
 # Ejercicios-metodos-array
-Este repositorio podemos encontrar los ejercicios para poder manipular los arreglos.
+En este repositorio podemos encontrar los ejercicios para poder manipular los arreglos.
+
+Se espera que hagas self learning sobre los temas de métodos de arreglos (forEach, map, filter, reduce y sort), y callbacks para poder resolver los ejercicios.
+Revisa este link, sobre métodos de arrays y también investiga por tu cuenta lo que haga falta:
+
+http://blog.builtbyedgar.com/javascript-map-filter-y-reduce-para-dummies/
+
+
+También estudia sobre callbacks:
+
+https://www.youtube.com/watch?v=N3pDWm9zpdc
+
