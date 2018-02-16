@@ -26,7 +26,7 @@ ejem: swapCase('hey gurl, lets javascript together sometime') ---> "HEY gurl, LE
 
 var swapCase = function(str) {
   // Escribe tu codigo aqui
-
+  
 }
 
 var outputSwapCase = swapCase("hey gurl, lets javascript together sometime")
@@ -35,7 +35,7 @@ console.log(outputSwapCase); //---> "HEY gurl, LETS javascript TOGETHER sometime
 
 //ShiftLetter
 /*Escribe una funcion ShiftLetter() que tome un string y retorna un string
-codificado cambiando cada letra por la que siguiente del alfabeto*/
+codificado cambiando cada letra por la siguiente del alfabeto*/
 //Tips: Investiga sobre las funciones de JS  (String.fromCharCode() y String.charCodeAt())
 // codigo ascii te puede ayudar para resolver este ejercicio
 
@@ -52,19 +52,32 @@ var outputShiftLetters = shiftLetters('hello');
 console.log(outputShiftLetters); // ---> 'ifmmp'
 
 //Even numbers
-//Manipula el siguiente array y devuelve un nuevo array que contenga solo a los números pares
-// ejem. output --> [2, 4, 6, 8, 10]
+/*Escribe una funcion llamada evenNumbers() que retorne un nuevo array que contenga 
+solo los números pares*/
+// ejem. evenNumber([1,2,3,4,5,6,7,8,9,10]) ---> [2, 4, 6, 8, 10]
 
 var numberArray = [1,2,3,4,5,6,7,8,9,10];
+
+//Odd numbers
+/*Escribe una funcion llamada oddNumbers() que retorne un nuevo array que contenga 
+solo los números imparespares*/
+// ejem. oddNumbers([1,2,3,4,5,6,7,8,9,10]) ---> [1, 3, 5, 7, 9]
+
+var numberArray = [1,2,3,4,5,6,7,8,9,10];
+
 
 //Reducer
 /*Escribe una función reducer() que tome un arreglo de numeros y retorne un
 arreglos de dos numeros, el primer numero es la suma de los numero pares y el
 segundo numero la suma de los numeros impares*/
+
 //ejem: reducer([1,2,3,4,5,6,7,8,9]) ---> [20, 25]
+
+// Nota: Debe de hacer uso de las funciones de evenNumbers() y oddNumbers.
 
 var reducer = function() {
   //Escribe tu codigo aqui.
+
 }
 
 var outputReducer = reducer([1,2,3,4,5,6,7,8,9]);
