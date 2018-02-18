@@ -239,3 +239,6 @@ var outputPaintPets = paintPets(data);
   ejem. output --> ['Apple', 'Banana', 'Kiwi', 'Orange'];*/
 
 var fruits = ['Banana', 'Orange', 'Apple', 'Kiwi'];
+var orderFruits  = fruits.sort();
+
+console.log(orderFruits);
