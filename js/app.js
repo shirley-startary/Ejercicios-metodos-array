@@ -84,7 +84,7 @@ var numberArray = [1,2,3,4,5,6,7,8,9,10];
 
 var evenNumbers = function(array) {
   //Escribe tu codigo aquí.
-  var evenNumbers = numberArray.filter(function(even){
+  var evenNumbers = array.filter(function(even){
     if (even % 2 !== 1) {
       return even
     }
@@ -102,10 +102,16 @@ console.log(outputEvenNumbers); // ---> [2, 4, 6, 8, 10]
 
 var oddNumbers = function(array) {
   //Escribe tu codigo aquí
+  var oddNumbers = array.filter(function(odd){
+    if (odd % 2 === 1) {
+      return odd
+    }
+  })
+    return oddNumbers;
 };
 
 var outputOdd = oddNumbers(numberArray);
-//console.log(outputOddNumbers); // ---> [1, 3, 5, 7, 9]
+console.log(outputOdd); // ---> [1, 3, 5, 7, 9]
 
 
 // 6. Reducer
@@ -115,12 +121,27 @@ var outputOdd = oddNumbers(numberArray);
   ejem: reducer([1,2,3,4,5,6,7,8,9]) ---> [20, 25]
 Nota: Debes de hacer uso de las funciones de evenNumbers() y oddNumbers.*/
 
-var reducer = function() {
+
+
+var reducer = function(array) {
   //Escribe tu codigo aquí
+  var arrayEvenNum = evenNumbers(array);
+  var totalEven = arrayEvenNum.reduce(function(prev, curr){
+    return prev + curr;
+  }, 0);
+
+
+  var arrayOddNum = oddNumbers(array);
+  var totalOdd = arrayOddNum.reduce(function(prev, curr) {
+    return prev + curr;
+  }, 0);
+
+  return [totalEven, totalOdd];
 
 }
 
-var outputReducer = reducer([1,2,3,4,5,6,7,8,9]);
+var array = [1,2,3,4,5,6,7,8,9];
+var outputReducer = reducer(array);
 console.log(outputReducer); // ---> [ 20, 25 ]
 
 
