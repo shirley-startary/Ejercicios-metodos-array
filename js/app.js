@@ -161,6 +161,19 @@ var persons = [
   {id : 5, name : "Alex", tags : "java"}
 ];
 
+
+var javascriptTag = function(array) {
+  var result = array.map(function(person){
+    return person.tags;
+  }).filter(function(sameWord){
+    return sameWord === "javascript";
+  })
+  return result
+}
+
+var outputJsTag = javascriptTag(persons);
+console.log(outputJsTag);
+
 // 8. Render in DOM
 /*Usando la data anterior y alguno de los métodos, pinta en el index.html a través del DOM
  cada una de las personas y todas sus propiedades */
