@@ -8,14 +8,20 @@
  * ejem: capitalize("whoop") --->  "WHOOP" */
 
 var capitalize = function(str) {
-  //Escribe tu codigo aqui
+  //Escribe tu codigo aqui 
   // No puedes utilizar directamente sobre str toUpperCase
-
+  var array = str.split("");
+  var newArray = array.map(function(item){
+    // console.log(item);
+    return item.toUpperCase();
+  });
+  var newString = newArray.join("");
+  return newString;
 }
 
 //Utiliza console.log() para visualizar el funcionamiento de tu codigo.
 var outputCapitalize = capitalize("whoop")
-console.log(outputCapitalize); //----> "WHOOP";
+// console.log(outputCapitalize); //----> "WHOOP";
 
 
 // 2. swapCase
@@ -26,7 +32,16 @@ console.log(outputCapitalize); //----> "WHOOP";
 
 var swapCase = function(str) {
   // Escribe tu codigo aqui
-  
+  var array = str.split(" ");
+  var newArray = array.map(function(element, index){
+    // console.log(element, index);
+    if (index % 2 === 0) {
+      return capitalize(element);
+    }
+    return element;
+  });
+  var newString = newArray.join(" ");
+  return newString;
 }
 
 var outputSwapCase = swapCase("hey gurl, lets javascript together sometime")
@@ -73,7 +88,7 @@ var oddNumbers = function(array) {
   //Escribe tu codigo aqui.
 };
 
-var outputOdd = oddNumbers(numberArray);
+var outputOddNumbers = oddNumbers(numberArray);
 console.log(outputOddNumbers); // ---> [1, 3, 5, 7, 9]
 
 
@@ -151,6 +166,5 @@ var data = [
   ejem. output --> ['Apple', 'Banana', 'Kiwi', 'Orange'];*/
 
 var fruits = ['Banana', 'Orange', 'Apple', 'Kiwi'];
-
 
 
