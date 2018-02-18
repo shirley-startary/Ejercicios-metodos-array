@@ -1,9 +1,9 @@
 //REGLAS:
 //No puedes utilizar "loops" en ninguna de las funciones (for, while, do while)
-//Utiliza los metodos para arreglos .map, .reduce, .filter, .forEach...
+//Utiliza los metodos para arreglos .map, .reduce, .filter, .forEach y .sort
 
 // 1. Capitalize
-/*Escribe una funcion capitalize que tome una palabra como string y retorne
+/*Escribe una función capitalize que tome una palabra como string y retorne
  *el mismo string con todas sus letras en mayusculas
  * ejem: capitalize("whoop") --->  "WHOOP" */
 
@@ -19,18 +19,18 @@ var capitalize = function(str) {
   return newString;
 }
 
-//Utiliza console.log() para visualizar el funcionamiento de tu codigo.
+//Utiliza console.log() para visualizar el funcionamiento de tu código.
 var outputCapitalize = capitalize("whoop")
 // console.log(outputCapitalize); //----> "WHOOP";
 
 
 // 2. swapCase
-/*Ahora escribe una funcion llamada swapCase que tome una oración como string y
-  retorne el string alternando una palabra en mayusculas y otra en minusculas
+/*Ahora escribe una función llamada swapCase que tome una oración como string y
+  retorne el string alternando una palabra en mayúsculas y otra en minúsculas
   ejem: swapCase('hey gurl, lets javascript together sometime') ---> "HEY gurl, LETS javascript TOGETHER sometime" 
   NOTA: Debes hacer uso de la funcion capitalize();*/
 
-var swapCase = function(str) {
+var swapCase = function(str) {  
   // Escribe tu codigo aqui
   var array = str.split(" ");
   var newArray = array.map(function(element, index){
@@ -49,17 +49,16 @@ console.log(outputSwapCase); //---> "HEY gurl, LETS javascript TOGETHER sometime
 
 
 // 3. shiftLetter
-/*Escribe una funcion ShiftLetter() que tome un string y retorna un string
-
-codificado cambiando cada letra por la siguiente del alfabeto*/
-//Tips: Investiga sobre las funciones de JS  (String.fromCharCode() y String.charCodeAt())
-// codigo ascii te puede ayudar para resolver este ejercicio
+/*Escribe una funcion ShiftLetter() que tome un string y retorne un string
+  codificado cambiando cada letra por la siguiente del alfabeto.
+  Tips: Investiga sobre las funciones de JS  (String.fromCharCode() y String.charCodeAt())
+  codigo ascii te puede ayudar para resolver este ejercicio */
 
 //ejem:  shiftLetters('hello') // ---> 'ifmmp'
 //ejem:  shiftLetters('abcxyz') // ---> "bcdyz
 
 var shiftLetters = function(str) {
-  //Escribe tu codigo aqui.
+  //Escribe tu codigo aquí
 }
 
 var outputShiftLetters = shiftLetters('hello');
@@ -73,7 +72,7 @@ console.log(outputShiftLetters); // ---> 'ifmmp'
 var numberArray = [1,2,3,4,5,6,7,8,9,10];
 
 var evenNumbers = function(array) {
-  //Escribe tu codigo aqui.
+  //Escribe tu codigo aquí.
 };
 
 var outputEvenNumbers = evenNumbers(numberArray);
@@ -85,7 +84,7 @@ console.log(outputEvenNumbers); // ---> [2, 4, 6, 8, 10]
 // ejem. oddNumbers([1,2,3,4,5,6,7,8,9,10]) ---> [1, 3, 5, 7, 9]
 
 var oddNumbers = function(array) {
-  //Escribe tu codigo aqui.
+  //Escribe tu codigo aquí
 };
 
 var outputOddNumbers = oddNumbers(numberArray);
@@ -94,14 +93,14 @@ console.log(outputOddNumbers); // ---> [1, 3, 5, 7, 9]
 
 // 6. Reducer
 /*Escribe una función reducer() que tome un arreglo de numeros y retorne un
-  arreglos de dos numeros, el primer numero es la suma de los numero pares y el
-  segundo numero la suma de los numeros impares
+  arreglo de dos elementos, el primer elemento será la suma de los números pares y el
+  segundo elemento la suma de los números impares
   ejem: reducer([1,2,3,4,5,6,7,8,9]) ---> [20, 25]
 
 Nota: Debes de hacer uso de las funciones de evenNumbers() y oddNumbers.*/
 
 var reducer = function() {
-  //Escribe tu codigo aqui.
+  //Escribe tu codigo aquí
 
 }
 
@@ -125,16 +124,25 @@ var persons = [
   {id : 5, name : "Alex", tags : "java"}
 ];
 
+// 8. Render in DOM
+/*Usando la data anterior y alguno de los métodos, pinta en el index.html a través del DOM
+ cada una de las personas y todas sus propiedades */
 
-// 8. Total de edad en 'años perro' 
-/*Considera la siguiente data. Nosotros tenmos un arreglo de objetos, cada objeto representa
+var paintPersons = function() {
+
+}
+
+var outputPaintPerson = paintPersons(persons);
+  
+// 9. Total de edad en 'años perro' 
+/*Considera la siguiente variables data. Nosotros tenmos un arreglo de objetos, cada objeto representa
   una mascota. Las mascotas tienen un nombre, una edad y un tipo.
   Instrucciones: 
   1. Selecciona solo a los perros.
   2. Transforma su edad en años perros (multiplica cada una por siete).
   3. Suma el resultado.
   
-  ejem. output --> 84
+  ejem. output --> 84 
 */
 
 var data = [
@@ -160,9 +168,18 @@ var data = [
   },
 ];
 
+// 10. Render in DOM 
+/*Usando la data anterior y alguno de los métodos, pinta en el index.html a través del DOM
+ cada una de las mascotas junto con todas su propiedades*/
 
-// 9. Alphabetic order
-/*Manipula el siguiente array de frutas y ordenalo alfabeticamente
+ var paintPets = function(array) {
+
+ };
+
+var outputPaintPets = paintPets(data);
+
+// 11. Alphabetic order
+/*Manipula el siguiente array de frutas y ordenalo alfabéticamente
   ejem. output --> ['Apple', 'Banana', 'Kiwi', 'Orange'];*/
 
 var fruits = ['Banana', 'Orange', 'Apple', 'Kiwi'];
