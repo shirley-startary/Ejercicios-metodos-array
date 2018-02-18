@@ -27,6 +27,7 @@ var outputCapitalize = capitalize("whoop")
 console.log(outputCapitalize); //----> "WHOOP";
 
 
+
 // 2. swapCase -------*****
 /*Ahora escribe una función llamada swapCase que tome una oración como string y
   retorne el string alternando una palabra en mayúsculas y otra en minúsculas
@@ -43,7 +44,8 @@ var outputSwapCase = swapCase("hey gurl, lets javascript together sometime")
 console.log(outputSwapCase); //---> "HEY gurl, LETS javascript TOGETHER sometime"
 
 
-// 3. shiftLetter
+
+// 3. shiftLetter -------*****
 /*Escribe una funcion ShiftLetter() que tome un string y retorne un string
   codificado cambiando cada letra por la siguiente del alfabeto.
   Tips: Investiga sobre las funciones de JS  (String.fromCharCode() y String.charCodeAt())
@@ -73,7 +75,8 @@ var outputShiftLetters = shiftLetters('hello');
 console.log(outputShiftLetters); // ---> 'ifmmp'
 
 
-// 4. Even numbers
+
+// 4. Even numbers -------*****
 //Manipula el siguiente array y devuelve un nuevo array que contenga solo a los números pares
 // ejem. evenNumber([1,2,3,4,5,6,7,8,9,10]) ---> [2, 4, 6, 8, 10]
 
@@ -81,6 +84,12 @@ var numberArray = [1,2,3,4,5,6,7,8,9,10];
 
 var evenNumbers = function(array) {
   //Escribe tu codigo aquí.
+  var evenNumbers = numberArray.filter(function(even){
+    if (even % 2 !== 1) {
+      return even
+    }
+  })
+    return evenNumbers;
 };
 
 var outputEvenNumbers = evenNumbers(numberArray);
