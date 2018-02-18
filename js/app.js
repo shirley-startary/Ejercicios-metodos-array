@@ -2,7 +2,7 @@
 //No puedes utilizar "loops" en ninguna de las funciones (for, while, do while)
 //Utiliza los metodos para arreglos .map, .reduce, .filter, .forEach y .sort
 
-// 1. Capitalize
+// 1. Capitalize -------*****
 /*Escribe una función capitalize que tome una palabra como string y retorne
  *el mismo string con todas sus letras en mayusculas
  * ejem: capitalize("whoop") --->  "WHOOP" */
@@ -11,26 +11,23 @@ var capitalize = function(str) {
   //Escribe tu codigo aqui
   // No puedes utilizar directamente sobre str toUpperCase
 
-  var newArray = str.split(""); // convertimos el string en array
-
+  var newArray = str.split(" "); // convertimos el string en array
 //con map cada letra del array pasa a mayúscula
   var capitalLetter = newArray.map(function(letter){
      var capital = letter.toUpperCase();
-     return capital;
+     return capital
    });
 
-  var againString = capitalLetter.join(""); // convertimos el array en string
+  var againString = capitalLetter.join(" "); // convertimos el array en string
   return againString;
 }
-
-
 
 //Utiliza console.log() para visualizar el funcionamiento de tu código.
 var outputCapitalize = capitalize("whoop")
 console.log(outputCapitalize); //----> "WHOOP";
 
 
-// 2. swapCase
+// 2. swapCase -------*****
 /*Ahora escribe una función llamada swapCase que tome una oración como string y
   retorne el string alternando una palabra en mayúsculas y otra en minúsculas
   ejem: swapCase('hey gurl, lets javascript together sometime') ---> "HEY gurl, LETS javascript TOGETHER sometime"
@@ -38,7 +35,8 @@ console.log(outputCapitalize); //----> "WHOOP";
 
 var swapCase = function(str) {
   // Escribe tu codigo aquí
-
+  //return capitalize(str)
+var newArray = str.split(" ");
 }
 
 var outputSwapCase = swapCase("hey gurl, lets javascript together sometime")
@@ -55,7 +53,20 @@ console.log(outputSwapCase); //---> "HEY gurl, LETS javascript TOGETHER sometime
 //ejem:  shiftLetters('abcxyz') // ---> "bcdyz
 
 var shiftLetters = function(str) {
-  //Escribe tu codigo aquí
+  var newArray = str.split("");
+
+  var asciiCode = newArray.map(function(code){
+    var hola =   code.charCodeAt() + 1;
+    return hola
+  });
+
+  var stringCode = asciiCode.map(function(letter){
+    var newLetter = String.fromCharCode(letter);
+    return newLetter;
+  });
+
+ var changeLetter = stringCode.join("");
+ return changeLetter;
 }
 
 var outputShiftLetters = shiftLetters('hello');
@@ -85,7 +96,7 @@ var oddNumbers = function(array) {
 };
 
 var outputOdd = oddNumbers(numberArray);
-console.log(outputOddNumbers); // ---> [1, 3, 5, 7, 9]
+//console.log(outputOddNumbers); // ---> [1, 3, 5, 7, 9]
 
 
 // 6. Reducer
