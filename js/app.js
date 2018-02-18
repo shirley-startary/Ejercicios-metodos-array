@@ -10,12 +10,19 @@
 var capitalize = function(str) {
   //Escribe tu codigo aqui
   // No puedes utilizar directamente sobre str toUpperCase
-
-}
-
-//Utiliza console.log() para visualizar el funcionamiento de tu código.
-var outputCapitalize = capitalize("whoop")
-console.log(outputCapitalize); //----> "WHOOP";
+  var myArr = new Array(str);
+  myArr.join("");
+  // console.log(myArr);
+  
+  myArr.forEach(element => {
+    var myString = element.toUpperCase();
+    console.log(myString);      
+  });
+ }
+ capitalize("qué pedo");
+ //Utiliza console.log() para visualizar el funcionamiento de tu código.
+ // var outputCapitalize = capitalize("whoop")
+ // console.log(outputCapitalize); //----> "WHOOP";
 
 
 // 2. swapCase
