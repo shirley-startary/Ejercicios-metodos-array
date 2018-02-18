@@ -177,8 +177,14 @@ console.log(outputJsTag);
 // 8. Render in DOM
 /*Usando la data anterior y alguno de los métodos, pinta en el index.html a través del DOM
  cada una de las personas y todas sus propiedades */
+var containerData = document.getElementById("person-data");
 
-var paintPersons = function() {
+var paintPersons = function(array) {
+  var data = array.map(function(person){
+    var unit = document.createElement("p");
+    unit.textContent = person.id + " " + person.name + " " + person.tags;
+    containerData.appendChild(unit);
+  })
 
 }
 
