@@ -10,13 +10,20 @@
 var capitalize = function(str) {
   //Escribe tu codigo aqui
   // No puedes utilizar directamente sobre str toUpperCase
-
-}
-
-//Utiliza console.log() para visualizar el funcionamiento de tu código.
-var outputCapitalize = capitalize("whoop")
-console.log(outputCapitalize); //----> "WHOOP";
-
+  var myArr = new Array(str);
+  var emptyArr = [];
+  myArr.forEach(element => {
+    var myString = element.toUpperCase(); 
+    emptyArr.push(myString);
+    var arrToString = emptyArr.toString(); 
+    console.log(arrToString);    
+  });
+  
+ }
+ capitalize("qué pedo");
+ //Utiliza console.log() para visualizar el funcionamiento de tu código.
+ // var outputCapitalize = capitalize("whoop")
+ // console.log(outputCapitalize); //----> "WHOOP";
 
 // 2. swapCase
 /*Ahora escribe una función llamada swapCase que tome una oración como string y
@@ -39,15 +46,23 @@ console.log(outputSwapCase); //---> "HEY gurl, LETS javascript TOGETHER sometime
   Tips: Investiga sobre las funciones de JS  (String.fromCharCode() y String.charCodeAt())
   codigo ascii te puede ayudar para resolver este ejercicio */
 
-//ejem:  shiftLetters('hello') // ---> 'ifmmp'
-//ejem:  shiftLetters('abcxyz') // ---> "bcdyz
+//ejem:  shiftLetters('hello') // ---> "ifmmp"
+//ejem:  shiftLetters('abcxyz') // ---> "bcdyz"
 
 var shiftLetters = function(str) {
   //Escribe tu codigo aquí
+  var convert = str.split("");
+  var arrWhite = [];
+  convert.map(element => {
+    var stringToCode = element.charCodeAt() + 1;
+    var codeToString = String.fromCharCode(stringToCode);
+    arrWhite.push(codeToString); 
+  })
+  console.log(arrWhite.join(""));  
 }
-
-var outputShiftLetters = shiftLetters('hello');
-console.log(outputShiftLetters); // ---> 'ifmmp'
+shiftLetters('hi');
+// var outputShiftLetters = shiftLetters('hello');
+// console.log(outputShiftLetters); // ---> "ifmmp"
 
 
 // 4. Even numbers
@@ -58,10 +73,12 @@ var numberArray = [1,2,3,4,5,6,7,8,9,10];
 
 var evenNumbers = function(array) {
   //Escribe tu codigo aquí.
+  var pairNumbers = numberArray.filter(number => number % 2 === 0)
+  console.log(pairNumbers);
 };
-
-var outputEvenNumbers = evenNumbers(numberArray);
-console.log(outputEvenNumbers); // ---> [2, 4, 6, 8, 10]
+evenNumbers(numberArray);
+// var outputEvenNumbers = evenNumbers(numberArray);
+// console.log(outputEvenNumbers); // ---> [2, 4, 6, 8, 10]
 
 
 // 5. Odd numbers
@@ -70,10 +87,13 @@ console.log(outputEvenNumbers); // ---> [2, 4, 6, 8, 10]
 
 var oddNumbers = function(array) {
   //Escribe tu codigo aquí
+  var unevenNumbers = numberArray.filter(oddNumber => oddNumber % 2 === 1)
+  console.log(unevenNumbers);
+  
 };
 
 var outputOdd = oddNumbers(numberArray);
-console.log(outputOddNumbers); // ---> [1, 3, 5, 7, 9]
+console.log(outputOdd); // ---> [1, 3, 5, 7, 9]
 
 
 // 6. Reducer
