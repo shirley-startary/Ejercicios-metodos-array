@@ -11,13 +11,14 @@ var capitalize = function(str) {
   //Escribe tu codigo aqui
   // No puedes utilizar directamente sobre str toUpperCase
   var myArr = new Array(str);
-  myArr.join("");
-  // console.log(myArr);
-  
+  var emptyArr = [];
   myArr.forEach(element => {
-    var myString = element.toUpperCase();
-    console.log(myString);      
+    var myString = element.toUpperCase(); 
+    emptyArr.push(myString);
+    var arrToString = emptyArr.toString(); 
+    console.log(arrToString);    
   });
+  
  }
  capitalize("qué pedo");
  //Utiliza console.log() para visualizar el funcionamiento de tu código.
@@ -52,14 +53,14 @@ var shiftLetters = function(str) {
   //Escribe tu codigo aquí
   var convert = str.split("");
   var arrWhite = [];
-  convert.map(c => {
-    var stringToCode = c.charCodeAt() + 1;
+  convert.map(element => {
+    var stringToCode = element.charCodeAt() + 1;
     var codeToString = String.fromCharCode(stringToCode);
     arrWhite.push(codeToString); 
   })
   console.log(arrWhite.join(""));  
 }
-shiftLetters('hello');
+shiftLetters('hi');
 // var outputShiftLetters = shiftLetters('hello');
 // console.log(outputShiftLetters); // ---> "ifmmp"
 
@@ -72,10 +73,12 @@ var numberArray = [1,2,3,4,5,6,7,8,9,10];
 
 var evenNumbers = function(array) {
   //Escribe tu codigo aquí.
+  var pairNumbers = numberArray.filter(number => number % 2 === 0)
+  console.log(pairNumbers);
 };
-
-var outputEvenNumbers = evenNumbers(numberArray);
-console.log(outputEvenNumbers); // ---> [2, 4, 6, 8, 10]
+evenNumbers(numberArray);
+// var outputEvenNumbers = evenNumbers(numberArray);
+// console.log(outputEvenNumbers); // ---> [2, 4, 6, 8, 10]
 
 
 // 5. Odd numbers
@@ -84,6 +87,7 @@ console.log(outputEvenNumbers); // ---> [2, 4, 6, 8, 10]
 
 var oddNumbers = function(array) {
   //Escribe tu codigo aquí
+  var
 };
 
 var outputOdd = oddNumbers(numberArray);
