@@ -224,6 +224,26 @@ var data = [
   },
 ];
 
+
+var dogs = function(array) {
+
+  var onlyDogs = array.filter(function(animal){
+    if(animal.type === "dog"){
+      return animal;
+    }
+  }).map(function(age){
+    return age.age * 7
+  }).reduce(function(prev, curr){
+    return prev + curr;
+  }, 0);
+
+  return onlyDogs;
+}
+
+
+var outputDogs = dogs(data);
+console.log(outputDogs);
+
 // 10. Render in DOM
 /*Usando la data anterior y alguno de los métodos, pinta en el index.html a través del DOM
  cada una de las mascotas junto con todas su propiedades*/
