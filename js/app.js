@@ -24,7 +24,6 @@ var capitalize = function(str) {
  // var outputCapitalize = capitalize("whoop")
  // console.log(outputCapitalize); //----> "WHOOP";
 
-
 // 2. swapCase
 /*Ahora escribe una función llamada swapCase que tome una oración como string y
   retorne el string alternando una palabra en mayúsculas y otra en minúsculas
@@ -46,15 +45,23 @@ console.log(outputSwapCase); //---> "HEY gurl, LETS javascript TOGETHER sometime
   Tips: Investiga sobre las funciones de JS  (String.fromCharCode() y String.charCodeAt())
   codigo ascii te puede ayudar para resolver este ejercicio */
 
-//ejem:  shiftLetters('hello') // ---> 'ifmmp'
-//ejem:  shiftLetters('abcxyz') // ---> "bcdyz
+//ejem:  shiftLetters('hello') // ---> "ifmmp"
+//ejem:  shiftLetters('abcxyz') // ---> "bcdyz"
 
 var shiftLetters = function(str) {
   //Escribe tu codigo aquí
+  var convert = str.split("");
+  var arrWhite = [];
+  convert.map(c => {
+    var stringToCode = c.charCodeAt() + 1;
+    var codeToString = String.fromCharCode(stringToCode);
+    arrWhite.push(codeToString); 
+  })
+  console.log(arrWhite.join(""));  
 }
-
-var outputShiftLetters = shiftLetters('hello');
-console.log(outputShiftLetters); // ---> 'ifmmp'
+shiftLetters('hello');
+// var outputShiftLetters = shiftLetters('hello');
+// console.log(outputShiftLetters); // ---> "ifmmp"
 
 
 // 4. Even numbers
@@ -80,7 +87,7 @@ var oddNumbers = function(array) {
 };
 
 var outputOdd = oddNumbers(numberArray);
-console.log(outputOddNumbers); // ---> [1, 3, 5, 7, 9]
+console.log(outputOdd); // ---> [1, 3, 5, 7, 9]
 
 
 // 6. Reducer
