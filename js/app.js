@@ -1,3 +1,12 @@
+// map crea una nueva array mediante la transformación de cada elemento en una array,
+// de forma individual. var task_names = tasks.map((task) => task.name );
+
+// filter crea una nueva matriz eliminando los elementos que no pertenecen.
+
+// reduce, por otro lado, toma todos los elementos en un array,
+// y los reduce en un solo valor.
+
+
 //REGLAS:
 //No puedes utilizar "loops" en ninguna de las funciones (for, while, do while)
 //Utiliza los metodos para arreglos .map, .reduce, .filter, .forEach y .sort
@@ -7,10 +16,12 @@
  *el mismo string con todas sus letras en mayusculas
  * ejem: capitalize("whoop") --->  "WHOOP" */
 
-var capitalize = function(str) {
-  //Escribe tu codigo aqui
-  // No puedes utilizar directamente sobre str toUpperCase
-
+var capitalize = function (str) {
+  var result = [];
+  Array.from(str).map((element) => {
+    result.push(element.toUpperCase());
+  });
+  return result.join('');
 }
 
 //Utiliza console.log() para visualizar el funcionamiento de tu código.
@@ -24,9 +35,17 @@ console.log(outputCapitalize); //----> "WHOOP";
   ejem: swapCase('hey gurl, lets javascript together sometime') ---> "HEY gurl, LETS javascript TOGETHER sometime" 
   NOTA: Debes hacer uso de la funcion capitalize();*/
 
-var swapCase = function(str) {
-  // Escribe tu codigo aquí
-  
+var swapCase = function (str) {
+  var result = [];
+  var text;
+  (str).split(' ').map((element, index) => {
+    if (index % 2 === 0) {
+      result.push(capitalize(element));
+    } else {
+      result.push(element);
+    }
+  });
+  return result.join(' ');
 }
 
 var outputSwapCase = swapCase("hey gurl, lets javascript together sometime")
@@ -42,8 +61,20 @@ console.log(outputSwapCase); //---> "HEY gurl, LETS javascript TOGETHER sometime
 //ejem:  shiftLetters('hello') // ---> 'ifmmp'
 //ejem:  shiftLetters('abcxyz') // ---> "bcdyz
 
-var shiftLetters = function(str) {
-  //Escribe tu codigo aquí
+var shiftLetters = function (str) {
+  var numbers = [];
+  var result;
+  var letters = [];
+  str.split('').map((element) => {
+    var number = element.charCodeAt();
+    number++
+    numbers.push(number);
+  });
+  numbers.map((element) => {
+    result = String.fromCharCode(element);
+    letters.push(result);
+  });
+  return letters.join('');
 }
 
 var outputShiftLetters = shiftLetters('hello');
@@ -54,11 +85,18 @@ console.log(outputShiftLetters); // ---> 'ifmmp'
 //Manipula el siguiente array y devuelve un nuevo array que contenga solo a los números pares
 // ejem. evenNumber([1,2,3,4,5,6,7,8,9,10]) ---> [2, 4, 6, 8, 10]
 
-var numberArray = [1,2,3,4,5,6,7,8,9,10];
+var numberArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-var evenNumbers = function(array) {
-  //Escribe tu codigo aquí.
-};
+var evenNumbers = function (array) {
+  // array.filter((element) => {
+  //   var result = element % 2 === 0;    
+  //   return result;
+  // });
+  var numbers = array.filter((element) => {
+    return element % 2 === 0;
+  });
+  return numbers;
+}
 
 var outputEvenNumbers = evenNumbers(numberArray);
 console.log(outputEvenNumbers); // ---> [2, 4, 6, 8, 10]
@@ -68,11 +106,14 @@ console.log(outputEvenNumbers); // ---> [2, 4, 6, 8, 10]
 //Ahora  manipulando el mismo array devuelve un nuevo array que contenga solo a los números impares.
 // ejem. oddNumbers([1,2,3,4,5,6,7,8,9,10]) ---> [1, 3, 5, 7, 9]
 
-var oddNumbers = function(array) {
-  //Escribe tu codigo aquí
+var oddNumbers = function (array) {
+  var numbers = array.filter((element) => {
+    return element % 2 !== 0
+  });
+  return numbers;
 };
 
-var outputOdd = oddNumbers(numberArray);
+var outputOddNumbers = oddNumbers(numberArray);
 console.log(outputOddNumbers); // ---> [1, 3, 5, 7, 9]
 
 
@@ -84,90 +125,127 @@ console.log(outputOddNumbers); // ---> [1, 3, 5, 7, 9]
 
 Nota: Debes de hacer uso de las funciones de evenNumbers() y oddNumbers.*/
 
-var reducer = function() {
-  //Escribe tu codigo aquí
+// var reducer = function (array) {
+//   var pair = evenNumbers(array).reduce((a, b) => {
+//     var sum = a + b;
+//     console.log(a+b);
+    
 
-}
+//   })
+//   // var sum = array.reduce((a, b) => {  
+//   //   evenNumbers(array);//pares
+//   //   oddNumbers(array);//impares
 
-var outputReducer = reducer([1,2,3,4,5,6,7,8,9]);
-console.log(outputReducer); // ---> [ 20, 25 ]
+//   // })
+
+// }
+
+// var outputReducer = reducer([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+// console.log(outputReducer); // ---> [ 20, 25 ]
 
 
 // 7. arrayt with strings 'javascript'
 /*Manipula el siguiente array y devuelve un nuevo array que contenga los strings 'javascript',
   debes concatenar dos difrentes métodos para arrays.
   Apartir de este ejercicio te toca darle nombre y forma a tus funciones y sus respectivos outputs.
-  ejem. output --> ['javascript', 'javascript', 'javascript']*/ 
+  ejem. output --> ['javascript', 'javascript', 'javascript']*/
 
 
 
-var persons = [
-  {id : 1, name : "John", tags : "javascript"}, 
-  {id : 2, name : "Alice", tags : "javascript"}, 
-  {id : 3, name : "Roger", tags : "java"},
-  {id : 4, name : "Adam", tags : "javascript"},
-  {id : 5, name : "Alex", tags : "java"}
+var persons = [{
+    id: 1,
+    name: "John",
+    tags: "javascript"
+  },
+  {
+    id: 2,
+    name: "Alice",
+    tags: "javascript"
+  },
+  {
+    id: 3,
+    name: "Roger",
+    tags: "java"
+  },
+  {
+    id: 4,
+    name: "Adam",
+    tags: "javascript"
+  },
+  {
+    id: 5,
+    name: "Alex",
+    tags: "java"
+  }
 ];
 
-// 8. Render in DOM
-/*Usando la data anterior y alguno de los métodos, pinta en el index.html a través del DOM
- cada una de las personas y todas sus propiedades */
-
-var paintPersons = function() {
-
+function filterTags(array){
+  jsArray= [];
+  var tags = array.filter(function(obj){ 
+    // jsArray.push(obj.tags === "javascript");    
+    return obj.tags === "javascript";
+  })
+  return tags;
 }
 
-var outputPaintPerson = paintPersons(persons);
-  
-// 9. Total de edad en 'años perro' 
-/*Considera la siguiente variables data. Nosotros tenmos un arreglo de objetos, cada objeto representa
-  una mascota. Las mascotas tienen un nombre, una edad y un tipo.
-  Instrucciones: 
-  1. Selecciona solo a los perros.
-  2. Transforma su edad en años perros (multiplica cada una por siete).
-  3. Suma el resultado.
-  
-  ejem. output --> 84 
-*/
+var tags = filterTags(persons);
+console.log(tags); 
 
-var data = [
-  {
-    name: 'Butters',
-    age: 3,
-    type: 'dog'
-  },
-  {
-    name: 'Lizzy',
-    age: 6,
-    type: 'dog'
-  },
-  {
-    name: 'Red',
-    age: 1,
-    type: 'cat'
-  },
-  {
-    name: 'Joey',
-    age: 3,
-    type: 'dog'
-  },
-];
+// // 8. Render in DOM
+// /*Usando la data anterior y alguno de los métodos, pinta en el index.html a través del DOM
+//  cada una de las personas y todas sus propiedades */
 
-// 10. Render in DOM 
-/*Usando la data anterior y alguno de los métodos, pinta en el index.html a través del DOM
- cada una de las mascotas junto con todas su propiedades*/
+// var paintPersons = function () {
 
- var paintPets = function(array) {
+// }
 
- };
+// var outputPaintPerson = paintPersons(persons);
 
-var outputPaintPets = paintPets(data);
+// // 9. Total de edad en 'años perro' 
+// /*Considera la siguiente variables data. Nosotros tenmos un arreglo de objetos, cada objeto representa
+//   una mascota. Las mascotas tienen un nombre, una edad y un tipo.
+//   Instrucciones: 
+//   1. Selecciona solo a los perros.
+//   2. Transforma su edad en años perros (multiplica cada una por siete).
+//   3. Suma el resultado.
 
-// 11. Alphabetic order
-/*Manipula el siguiente array de frutas y ordenalo alfabéticamente
-  ejem. output --> ['Apple', 'Banana', 'Kiwi', 'Orange'];*/
+//   ejem. output --> 84 
+// */
 
-var fruits = ['Banana', 'Orange', 'Apple', 'Kiwi'];
+// var data = [{
+//     name: 'Butters',
+//     age: 3,
+//     type: 'dog'
+//   },
+//   {
+//     name: 'Lizzy',
+//     age: 6,
+//     type: 'dog'
+//   },
+//   {
+//     name: 'Red',
+//     age: 1,
+//     type: 'cat'
+//   },
+//   {
+//     name: 'Joey',
+//     age: 3,
+//     type: 'dog'
+//   },
+// ];
 
+// // 10. Render in DOM 
+// /*Usando la data anterior y alguno de los métodos, pinta en el index.html a través del DOM
+//  cada una de las mascotas junto con todas su propiedades*/
 
+// var paintPets = function (array) {
 
+// };
+
+// var outputPaintPets = paintPets(data);
+
+// // 11. Alphabetic order
+// /*Manipula el siguiente array de frutas y ordenalo alfabéticamente
+//   ejem. output --> ['Apple', 'Banana', 'Kiwi', 'Orange'];*/
+
+// var fruits = ['Banana', 'Orange', 'Apple', 'Kiwi'];
